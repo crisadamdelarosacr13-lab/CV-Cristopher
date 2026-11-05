@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Cristopher Alejandro De La Rosa Munguia</title>
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --accent: #38bdf8;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--bg-secondary);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+
+        /* Columna Izquierda */
+        .sidebar {
+            background-color: #111827;
+            padding: 40px 30px;
+            border-right: 1px solid var(--border);
+        }
+
+        .profile-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-title h1 {
+            font-size: 1.5rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .profile-title h2 {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 400;
+            margin-top: 5px;
+        }
+
+        .section-title-sm {
+            font-size: 1.1rem;
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 5px;
+            margin: 25px 0 15px 0;
+            text-transform: uppercase;
+        }
+
+        .contact-info p, .sidebar li {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            word-break: break-word;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li::before {
+            content: "▹ ";
+            color: var(--accent);
+        }
+
+        .skills-tag {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background-color: #1e293b;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        /* Columna Derecha */
+        .main-content {
+            padding: 40px 30px;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            color: var(--accent);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .about p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item {
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 20px;
+            border-left: 2px solid var(--accent);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+
+        .job-title {
+            font-weight: bold;
+            font-size: 1.05rem;
+            color: var(--text-main);
+        }
+
+        .company {
+            color: var(--accent);
+            font-size: 0.95rem;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .job-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 8px 0;
+        }
+
+        .main-content ul {
+            padding-left: 20px;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        .main-content li {
+            margin-bottom: 5px;
+        }
+
+        /* Responsive para celulares */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- BARRA LATERAL (CONTACTO, EDUCACIÓN, HABILIDADES) -->
+        <aside class="sidebar">
+            <div class="profile-title">
+                <h1>Cristopher Alejandro De La Rosa Munguia</h1>
+                <h2>Estudiante de Ingeniería en Sistemas Computacionales</h2>
+            </div>
+
+            <h3 class="section-title-sm">Contacto</h3>
+            <div class="contact-info">
+                <p>📍 CDMX</p>
+                <p>📞 5655314676</p>
+                <p>✉️ cristopher.delarosa34@my.unitec.edu.mx</p>
+            </div>
+
+            <h3 class="section-title-sm">Educación</h3>
+            <div class="education">
+                <p><strong>Ingeniería en Sistemas Computacionales</strong></p>
+                <p style="color: var(--accent);">UNITEC Campus Sur</p>
+                <p class="date">2023 – Cursando</p>
+            </div>
+
+            <h3 class="section-title-sm">Idiomas</h3>
+            <ul>
+                <li>Español: Nativo</li>
+            </ul>
+
+            <h3 class="section-title-sm">Habilidades Técnicas</h3>
+            <div class="skills-tag">
+                <span class="tag">C++</span>
+                <span class="tag">Python</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Microsoft Excel</span>
+                <span class="tag">Microsoft Word</span>
+                <span class="tag">ISO 9001:2015</span>
+                <span class="tag">IATF 16949</span>
+                <span class="tag">5S</span>
+            </div>
+
+            <h3 class="section-title-sm">Habilidades Personales</h3>
+            <ul>
+                <li>Trabajo en equipo</li>
+                <li>Liderazgo</li>
+                <li>Resolución de problemas</li>
+                <li>Atención al cliente</li>
+            </ul>
+
+            <h3 class="section-title-sm">Certificaciones</h3>
+            <ul>
+                <li>Gemini Academy</li>
+                <li>CCNA: Introducción a las Redes</li>
+                <li>Power BI</li>
+                <li>Image Processing Onramp</li>
+                <li>Google Analytics</li>
+                <li>MATLAB Onramp</li>
+            </ul>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL (SOBRE MÍ Y EXPERIENCIA) -->
+        <main class="main-content">
+            <section class="about">
+                <h3 class="section-title">Sobre Mí</h3>
+                <p>
+                    Futuro Ingeniero en Sistemas Computacionales apasionado por la tecnología y la resolución de problemas. 
+                    Cuento con capacidad analítica, enfoque en la calidad y una destacada facilidad de expresión y servicio 
+                    al cliente, competencias que me permiten coordinar requerimientos técnicos, brindar soporte oportuno y 
+                    establecer canales de comunicación claros y efectivos.
+                </p>
+            </section>
+
+            <section class="experience">
+                <h3 class="section-title">Experiencia Profesional</h3>
+
+                <div class="timeline-item">
+                    <div class="job-header">
+                        <span class="job-title">Coordinador Administrativo</span>
+                        <span class="date">2023 – 2026</span>
+                    </div>
+                    <div class="company">International Foam Mex</div>
+                    <p class="job-desc">Lideré y coordiné a un equipo de operadores, asignando actividades diarias, supervisando el desempeño y asegurando el cumplimiento de los objetivos operativos.</p>
+                    <ul>
+                        <li>Operador de maquinaria para procesos de producción.</li>
+                        <li>Fabricación y corte de materiales conforme a especificaciones.</li>
+                        <li>Inspección visual de piezas para asegurar el cumplimiento de estándares de calidad.</li>
+                        <li>Trabajo en equipo para cumplir con metas de producción, registro y seguimiento.</li>
+                        <li>Supervisión y coordinación de personal operativo para el cumplimiento de objetivos.</li>
+                        <li>Liderazgo de equipo, asignación de actividades y seguimiento diario.</li>
+                        <li>Monitoreo del desempeño para cumplir estándares de calidad y seguridad.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="job-header">
+                        <span class="job-title">Ayudante Técnico de Ingeniero Eléctrico</span>
+                        <span class="date">2019 – 2022</span>
+                    </div>
+                    <div class="company">Particular</div>
+                    <p class="job-desc">Soporte y ejecución de actividades técnicas en campo y soporte operativo.</p>
+                    <ul>
+                        <li>Instalación y cableado eléctrico.</li>
+                        <li>Mantenimiento correctivo y preventivo.</li>
+                        <li>Manejo y uso de herramientas especializadas.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="job-header">
+                        <span class="job-title">Jefe de Meseros</span>
+                        <span class="date">2017 – 2019</span>
+                    </div>
+                    <div class="company">Salón Barón De La Rosa</div>
+                    <p class="job-desc">Dirigí y supervisé al equipo de meseros y personal de apoyo durante los turnos, asignando estaciones y asegurando el cumplimiento de los estándares de presentación y disciplina.</p>
+                    <ul>
+                        <li>Atención directa y servicio al cliente.</li>
+                        <li>Coordinación de turnos y capacitación de personal.</li>
+                        <li>Resolución de conflictos en el área operativa.</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
